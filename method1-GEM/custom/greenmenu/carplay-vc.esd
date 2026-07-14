@@ -1,0 +1,41 @@
+###########################################################################################
+# Main -> MIB STD2 Toolbox -> Customization -> carplay-vc
+###########################################################################################
+screen carplay-vc Customization
+
+keyValue
+    value   String sys 0x00000000 0
+    label   "MST2-CarPlay-VC-Patch v1"
+    poll    0
+keyValue
+    value   String sys 0x00000000 0
+    label   "Patch to bring CarPlay song info natively to Virtual Cockpit"
+    poll    0
+keyValue
+    value   String sys 0x00000000 0
+    label   "Including title, artist, album, cover-art, progression and shuffle"
+    poll    0
+keyValue
+    value   String sys 0x00000000 0
+    label   "It also enabled a button in Maps to import addresses into internal navi"
+    poll    0
+keyValue
+    value   String sys 0x00000000 0
+    label   "Made by xPaiiN <3 github.com/xPaiiN/mst2-carplay-vc"
+    poll    0
+
+script
+    value   sys 1 0x0100 "/tsd/etc/persistence/esd/scripts/cpvc_activate.sh"
+    label   "Enable Patch"
+script
+    value   sys 1 0x0100 "/tsd/etc/persistence/esd/scripts/cpvc_activate_debug.sh"
+    label   "Enable Patch with --debug"
+script
+    value   sys 1 0x0100 "/tsd/etc/persistence/esd/scripts/cpvc_deactivate.sh"
+    label   "Disable + Cleanup"
+script
+    value   sys 1 0x0100 "/tsd/etc/persistence/esd/scripts/cpvc_status.sh"
+    label   "Show Status"
+script
+    value   sys 1 0x0100 "/tsd/etc/persistence/esd/scripts/cpvc_copy_logs.sh"
+    label   "Copy logs to SD (if --debug enabled)"
