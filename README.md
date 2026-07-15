@@ -256,7 +256,7 @@ disable patch, then enable again with the `--debug` parameter:
 ```bash
 sh /media/mp001/mst2-carplay-vc-patch-v1/disable_patch.sh
 
-reboot
+# reboot
 
 sh /media/mp001/mst2-carplay-vc-patch-v1/enable_patch.sh --debug
 # reboot to apply
