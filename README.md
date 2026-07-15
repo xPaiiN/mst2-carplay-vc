@@ -56,7 +56,6 @@ Screenshots of every variant are in the [pics](pics/) folder.
 
 ## Variants
 
-- `mst2-carplay-vc-<variant>-<region>-v1.jar`
 - Only place 1 jar file in folder
 - Every variant except lite also needs the native `cpvc-cover-bridge` helper
 - The jars for each variant are in `required-files/region-[eu|cn]/variant[x]/`.
