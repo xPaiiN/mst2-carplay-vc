@@ -134,10 +134,10 @@ sd/
 
 - Open GEM
 - browse to /mibstd2-toolbox/customization/greenmenu
-- "Copy custom GEM screens and scripts to unit"
+- 'Copy custom GEM screens and scripts to unit'
 - Re-open GEM when done
 - browse to /mibstd2-toolbox/customization/carplay-vc
-- "Enable Patch"
+- 'Enable Patch'
 - Reboot if everything ok
 - Enjoy :)
 - Feel free to share your results in this [discussion](https://github.com/xPaiiN/mst2-carplay-vc/discussions/1) <3
