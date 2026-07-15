@@ -16,7 +16,7 @@
 
 <img src="mst2-cpvc-stock.jpeg" width="90%">
 
-## navigation import (EU full)
+## Navigation Import (EU Full Patch)
 
 **Stock**
 
@@ -29,9 +29,6 @@
 **Share to External Maps**
 
 <img src="mst2-cpvc-navi-share-to-external-maps.jpeg" width="600">
-
-
-
 
 
 
