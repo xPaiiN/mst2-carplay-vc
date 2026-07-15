@@ -6,10 +6,10 @@ It also enables a "Share to External Maps" button within navigation apps to dire
 
 Should work on all firmwares.
 
-## How it works
+for a more detailed explanation of how it works, see [technical-readme.md](https://github.com/xPaiiN/mst2-carplay-vc/blob/5ae4a749f1a6a86d09a123a0d09f00d8bbebc068/technical-readme.md)
 
+<img src="https://github.com/xPaiiN/mst2-carplay-vc/blob/cf1db33f421d6441804630c6a78a10ffa9ca6a3e/pics/mst2-cpvc-full.jpeg" width="1240">
 
-for a more detailed explanation of how it works, see [technical-readme.md](technical-readme.md)
 
 ## Compatibility
 
@@ -19,7 +19,7 @@ for a more detailed explanation of how it works, see [technical-readme.md](techn
 >
 > - Does NOT work with:
 >   - MIB2Std Delphi (MIB2 Standard)
->   - MHI2 Harman (MIB2 High) (yet)
+>   - MHI2 Harman (MIB2 High) (works so far, but not yet released)
 
 > [!IMPORTANT]
 > Completely vibecoded project. Not responsible for any damages. Use at your own risk. More info at the bottom.
@@ -64,12 +64,12 @@ Screenshots of every variant are in the [pics](pics/) folder.
 
 ### Region EU (4 variants)
 
-| Variant             | Song info | Cover | Progress | Shuffle | Navi |
-| ------------------- | :-------: | :---: | :------: | :-----: | :--: |
-| **full**            |     ✅     |   ✅   |    ✅     |    ✅    |  ✅   |
-| **no-navi**         |     ✅     |   ✅   |    ✅     |    ✅    |  ❌   |
-| **no-navi-no-prog** |     ✅     |   ✅   |    ❌     |    ✅    |  ❌   |
-| **lite**            |     ✅     |   ❌   |    ❌     |    ❌    |  ❌   |
+| Variant | Song info | Cover | Progress | Shuffle | Navi |
+|---|:-:|:-:|:-:|:-:|:-:|
+|**full**|✅|✅|✅|✅|✅|
+| **no-navi** | ✅ | ✅ | ✅ | ✅ |❌|
+|**no-navi-no-prog**| ✅ |✅|❌| ✅ |❌|
+| **lite** |✅|❌ |❌|❌| ❌ |
 
 > **Playback Progress**
 >
@@ -93,13 +93,13 @@ Screenshots of every variant are in the [pics](pics/) folder.
 
 ### Region CN (3 variants)
 
-CN has **no navi variant** (yet).
+CN has no navi variant (yet).
 
-| Variant     | Song info | Cover | Progress | Shuffle |
-| ----------- | :-------: | :---: | :------: | :-----: |
-| **full**    |     ✅     |   ✅   |    ✅     |    ✅    |
-| **no-prog** |     ✅     |   ✅   |    ❌     |    ✅    |
-| **lite**    |     ✅     |   ❌   |    ❌     |    ✅    |
+| Variant | Song info | Cover | Progress | Shuffle |
+|---|:-:|:-:|:-:|:-:|
+| **full** |✅|✅| ✅ |✅|
+|**no-prog**| ✅ |✅|❌|✅|
+| **lite** | ✅ |❌|❌ | ✅ |
 
 ## How to enable
 
@@ -216,12 +216,22 @@ Feel free to share your results in this [discussion](https://github.com/xPaiiN/m
 
 ## How to disable
 
+### Method 1: via the carplay-vc GEM menu entry
+
+- Open GEM
+- browse to /mibstd2-toolbox/customization/carplay-vc
+- `Disable + Cleanup`
+- Reboot if everything ok
+- Back to stock, all backups restored
+
+
+
+### Method 2: connect via telnet and run the disable script
+
 ```bash
 sh /media/mp001/mst2-carplay-vc-patch-v1/disable_patch.sh
 # reboot to apply
 ```
-
-Method 1 (GEM): browse to /mibstd2-toolbox/customization/carplay-vc and run "Disable + Cleanup", then reboot.
 
 
 
@@ -234,7 +244,7 @@ You need to enable the --debug version of the patch to allow logging.
 - Open GEM
 - browse to /mibstd2-toolbox/customization/carplay-vc
 - `Enable Patch with --debug`
-- Reboot when everything ok
+- Reboot if everything ok
 - Then reproduce the errors and log them
 - browse to /mibstd2-toolbox/customization/carplay-vc
 - `Copy logs to SD (if --debug enabled)`
@@ -307,13 +317,13 @@ Tests were done with:
 - Software Version: 0478
 - Hardware Version: H32
 
-**MHI2**
-- MIB2High Harman / Alpine
-- Part Number 3EB 035 049
+**MHI2.5**
+- MIB2High Harman
+- Part Number 3EB 035 048
 - Region: CN
 - Software Version: 0841
 - Hardware Version: H55
-- Note: MHI2 Version is in the works.
+- Note: MHI2 Version is in the works. all MHI2 testing was done by him, not me.
 ---
 
 
