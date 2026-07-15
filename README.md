@@ -6,7 +6,7 @@ It also enables a "Share to External Maps" button within navigation apps to dire
 
 Should work on all firmwares.
 
-for a more detailed explanation of how it works, see [technical-readme.md](https://github.com/xPaiiN/mst2-carplay-vc/blob/5ae4a749f1a6a86d09a123a0d09f00d8bbebc068/technical-readme.md)
+for a more detailed explanation of how it works, see [technical-readme.md](/technical-readme.md)
 
 <img src="https://github.com/xPaiiN/mst2-carplay-vc/blob/cf1db33f421d6441804630c6a78a10ffa9ca6a3e/pics/mst2-cpvc-full.jpeg" width="1240">
 
