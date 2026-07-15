@@ -98,7 +98,7 @@ CN has no navi variant (yet).
 |---|:-:|:-:|:-:|:-:|
 | **full** |✅|✅| ✅ |✅|
 |**no-prog**| ✅ |✅|❌|✅|
-| **lite** | ✅ |❌|❌ | ✅ |
+| **lite** | ✅ |❌|❌ | ❌  |
 
 ## How to enable
 
