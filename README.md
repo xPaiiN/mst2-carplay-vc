@@ -1,7 +1,5 @@
 # mst2-carplay-vc
 
-**MST2 Patch to integrate CarPlay natively in VC**
-
 This patch brings CarPlay song information including title, artist, album, playback progress, shuffle view and cover art to the Virtual Cockpit instead of just showing the generic "Apple CarPlay" text.
 
 It also enables a "Share to External Maps" button within navigation apps to directly import the addresses into the internal MIB2 Navi (only EU for now).
