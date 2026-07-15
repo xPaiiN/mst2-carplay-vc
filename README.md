@@ -286,7 +286,7 @@ Devices:
 Music sources:
 
 - Apple Music (main)
-- Spotify (I need more testers to debug and verify as I barely use Spotify anymore, I think its buggy)
+- Spotify (I need more testers to debug and verify as I barely use Spotify anymore, I think its buggy as it first shows a blank spotify cover, then the real cover)
 - Youtube Sideloaded
 - Local mp3 files (files apps)
 
@@ -313,7 +313,7 @@ Tests were done with:
 - Region: CN
 - Software Version: 0841
 - Hardware Version: H55
-- Note: MHI2 Version is in the works. not done yet
+- Note: MHI2 Version is in the works.
 ---
 
 
@@ -329,6 +329,7 @@ Tests were done with:
   - [ ] hold
   - [ ] caller picture
   - [x] removed call bypass implementation from main patch as it really serves no purpose right now
+- [ ] MHI2 support (almost done)
 - [x] Display shuffle icon if on (no interest in repeat icon as I don't use this ever and it also collides with shuffle on Seat Leon HU)
 - [x] Cover art faster than 7 sec frequency (15 sec max?)
 - [x] make songtext almost instant with 0,5sec delay
@@ -375,6 +376,5 @@ I originally made this patch because it annoyed me that there was no stock imple
 It turned into a bit more iterations than I expected. Somewhere around 300 patch builds and about 120 trips to the car to test them, since theres no safely work on these units and every test means copying it over, rebooting and checking
 
 Bootlooped the HU twice along the way, first one was because I was messing with cpu.conf, and second one was because of emtpy runHMI.sh on reboot
-
 
 Also I wrote this readme by myself tho, no AI used
