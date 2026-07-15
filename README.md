@@ -383,7 +383,7 @@ Tests were done with:
 
 I originally made this patch because it annoyed me that there was no stock implementation. I also wanted to see how far I could push AI without writing a single LOC myself.
 
-It turned into a bit more iterations than I expected. Somewhere around 300 patch builds and about 120 trips to the car to test them, since theres no safely work on these units and every test means copying it over, rebooting and checking
+It turned into a bit more iterations than I expected. Somewhere around 300 patch builds and about 120 trips to the car to test them, since theres no safely way to work on these units and every test means copying it over, rebooting and checking
 
 Bootlooped the HU twice along the way, first one was because I was messing with cpu.conf, and second one was because of emtpy runHMI.sh on reboot
 
