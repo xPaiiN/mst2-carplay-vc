@@ -4,6 +4,8 @@ This patch brings CarPlay song information including title, artist, album, playb
 
 It also enables a "Share to External Maps" button within navigation apps to directly import the addresses into the internal MIB2 Navi (only EU for now).
 
+(True turn-by-turn directions are coming in the next update)
+
 Works with both wired connection and wireless connection via third-party dongles. 
 
 Should work on all firmwares.
@@ -88,7 +90,9 @@ Screenshots of every variant are in the [pics](pics/) folder.
 >
 > There are some pictures in the [pics](pics/) folder
 >
-> True turn-by-turn route guidance is still not researched enough on MST2 :(
+> ~~True turn-by-turn route guidance is still not researched enough on MST2 :(~~
+>
+> True turn-by-turn implementation is done and is coming soon
 >
 > also not yet available on cn-region as it causes some problems, like carplay blackscreen.
 
