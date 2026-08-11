@@ -4,7 +4,7 @@ This patch brings CarPlay song information including title, artist, album, playb
 
 It also enables a "Share to External Maps" button within navigation apps to directly import the addresses into the internal MIB2 Navi (only EU for now).
 
-(True turn-by-turn directions are coming in the next update)
+(True turn-by-turn directions and telephony implementation are coming in the next update)
 
 Works with both wired connection and wireless connection via third-party dongles. 
 
@@ -347,14 +347,19 @@ Tests were done with:
     - [ ] fix mute state on vc persists through hang up to next call
   - [x] hold
   - ~~[ ] caller picture~~ not possible to get from iphone
+  - [x] battery state
+  - [ ] replace "Apple CarPlay" with device name
+    - [ ] its possible, but you lose the native carplay icon
+  - [x] native carplay icon before "Apple CarPlay" string
   - [x] removed call bypass implementation from main patch as it really serves no purpose right now
-- [x] Full turn by turn route guidance
+- [x] Full navi implementation
   - [x] true turn by turn implementation
   - [x] eta
   - [x] lane guidance
   - [x] sidestreets
   - [ ] highway fixes
   - [ ] localization
+  - [ ] into internal maps via most?
 - [ ] MHI2 support (almost done)
 - [x] Display shuffle icon if on (no interest in repeat icon as I don't use this ever and it also collides with shuffle on Seat Leon HU)
 - [x] Cover art faster than 7 sec frequency (15 sec max?)
