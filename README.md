@@ -337,13 +337,24 @@ Tests were done with:
 ## To-Do
 
 - [ ] Cover art even more reliable. Currently this version can fail sometimes.
-- [ ] Full telephone integration
-  - [ ] recents list
-  - [ ] favorite list
-  - [ ] mute
-  - [ ] hold
-  - [ ] caller picture
+- [x] Full telephone integration
+  - [x] recents list
+    - [x] date and time stamps
+    - [x] callable from vc with buttons
+  - ~~[ ] favorite list~~ not possible to show on vc
+  - [x] call duration (not possible natively, only as text behind name) 
+  - [x] mute
+    - [ ] fix mute state on vc persists through hang up to next call
+  - [x] hold
+  - ~~[ ] caller picture~~ not possible to get from iphone
   - [x] removed call bypass implementation from main patch as it really serves no purpose right now
+- [x] Full turn by turn route guidance
+  - [x] true turn by turn implementation
+  - [x] eta
+  - [x] lane guidance
+  - [x] sidestreets
+  - [ ] highway fixes
+  - [ ] localization
 - [ ] MHI2 support (almost done)
 - [x] Display shuffle icon if on (no interest in repeat icon as I don't use this ever and it also collides with shuffle on Seat Leon HU)
 - [x] Cover art faster than 7 sec frequency (15 sec max?)
