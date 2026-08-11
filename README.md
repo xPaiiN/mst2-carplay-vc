@@ -350,6 +350,7 @@ Tests were done with:
   - [x] battery state
   - [ ] replace "Apple CarPlay" with device name
     - [ ] its possible, but you lose the native carplay icon
+    - [ ] however you CAN use the carrier name to replace with anything
   - [x] native carplay icon before "Apple CarPlay" string
   - [x] removed call bypass implementation from main patch as it really serves no purpose right now
 - [x] Full navi implementation
