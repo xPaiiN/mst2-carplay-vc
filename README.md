@@ -4,7 +4,7 @@ This patch brings CarPlay song information including title, artist, album, playb
 
 It also enables a "Share to External Maps" button within navigation apps to directly import the addresses into the internal MIB2 Navi (only EU for now).
 
-(True turn-by-turn directions and telephony implementation are coming in the next update)
+(Full navi and telephony implementation are coming in the next update)
 
 Works with both wired connection and wireless connection via third-party dongles. 
 
