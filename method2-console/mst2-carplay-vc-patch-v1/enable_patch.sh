@@ -1,7 +1,7 @@
 #!/bin/sh
 # enable_patch.sh -- universal MANUAL activator for the MST2 CarPlay-VC v1 patch.
 # The single mst2-carplay-vc-<variant>-<region>-v<N>.jar next to this script decides the variant
-# (full/full-no-prog/lite) and region (eu/cn). full/full-no-prog/noprog deploy the native cover-bridge +
+# (full/full-no-prog/lite) and region (eu/cn/na). full/full-no-prog/noprog deploy the native cover-bridge +
 # keepalive; lite does not. Pass --debug to also enable boot debug logging for the next boot.
 # Whitelist-safe self-dir resolution (parameter expansion only -- no external dirname/basename).
 case "$0" in

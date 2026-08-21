@@ -67,12 +67,20 @@ find_stick() {
 # RUNHMI_PATH overrides for sandbox tests; default = the vehicle path.
 detect_region() {
     rh="${RUNHMI_PATH:-$RUN_HMI}"
-    raw=$(grep "# HMI Variant: STD2Nav_" "$rh" 2>/dev/null | sed 's/.*STD2Nav_//;s/[[:space:]]*$//')
+    raw=$(grep "# HMI Variant: STD2Nav" "$rh" 2>/dev/null | sed 's/.*STD2Nav[^_]*_//;s/[[:space:]]*$//')
     case "$raw" in
         EU)      echo "eu" ;;
         CHN)     echo "cn" ;;
-        NAR|US)  echo "eu" ;;
-        *)       echo "unknown" ;;
+        NAR|US)  echo "na" ;;
+        *)
+            raw=$(grep "# HMI Variant:" "$rh" 2>/dev/null | sed 's/.*# HMI Variant://;s/[[:space:]]*$//')
+            case "$raw" in
+                *EU*)      echo "eu" ;;
+                *CHN*)     echo "cn" ;;
+                *NAR*|*US*) echo "na" ;;
+                *)         echo "unknown" ;;
+            esac
+            ;;
     esac
 }
 
@@ -108,16 +116,16 @@ find_patch_jar() {
     case "$_tag" in
         *-v[0-9]*) _core="${_tag%-v[0-9]*}" ;;
     esac
-    # Region = last 2-char segment (eu/cn); variant = everything before the region
+    # Region = last 2-char segment (eu/cn/na); variant = everything before the region
     REGION="${_core##*-}"
     VARIANT="${_core%-$REGION}"
     case "$VARIANT" in
         full|no-navi|no-navi-no-prog|no-prog|lite) ;;
-        *) echo "FAIL: unknown variant '$VARIANT' in $_base (EU: full|no-navi|no-navi-no-prog|lite; CN: full|no-prog|lite)."; return 1 ;;
+        *) echo "FAIL: unknown variant '$VARIANT' in $_base (EU/NA: full|no-navi|no-navi-no-prog|lite; CN: full|no-prog|lite)."; return 1 ;;
     esac
     case "$REGION" in
-        eu|cn) ;;
-        *) echo "FAIL: unknown region '$REGION' in $_base (expected eu|cn)."; return 1 ;;
+        eu|cn|na) ;;
+        *) echo "FAIL: unknown region '$REGION' in $_base (expected eu|cn|na)."; return 1 ;;
     esac
     _hu=$(detect_region)
     if [ "$_hu" = unknown ]; then
@@ -127,7 +135,7 @@ find_patch_jar() {
     fi
     if [ "$REGION" != "$_hu" ]; then
         echo "FAIL: JAR region '$REGION' does not match this head-unit ('$_hu')."
-        echo "      Copy a compatible version of mst2-carplay-vc-${VARIANT}-${_hu}.jar."
+        echo "      Copy a compatible version of mst2-carplay-vc-${VARIANT}-${_hu}-v<N>.jar."
         return 1
     fi
     return 0
@@ -141,10 +149,10 @@ variant_uses_cover() {
     esac
 }
 
-# EU "full" is the complete variant = media + the Prio-4 "Share to vehicle" destination bridge
-# (needs iap2 [destination] enabled). CN "full" is media-only (no navi) -> region-gated to eu.
+# EU/NA "full" is the complete variant = media + the Prio-4 "Share to vehicle" destination bridge
+# (needs iap2 [destination] enabled). CN "full" is media-only (no navi) -> region-gated to eu/na.
 variant_uses_navi() {
-    [ "$REGION" = eu ] || return 1
+    case "$REGION" in eu|na) ;; *) return 1 ;; esac
     case "$1" in
         full) return 0 ;;
         *) return 1 ;;

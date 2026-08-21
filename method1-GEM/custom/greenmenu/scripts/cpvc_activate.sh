@@ -1,6 +1,6 @@
 #!/bin/sh
 # cpvc_activate.sh -- universal activate. The single mst2-carplay-vc-<variant>-<region>-v<N>.jar on
-# the stick decides the variant (full/full-no-prog/lite) and region (eu/cn). full/full-no-prog/noprog
+# the stick decides the variant (full/full-no-prog/lite) and region (eu/cn/na). full/full-no-prog/noprog
 # deploy the native cover-bridge + keepalive; lite does not. Plain activate = debug logging OFF.
 . "${CPVC_ROOT}/tsd/etc/persistence/esd/scripts/cpvc_common.sh"
 

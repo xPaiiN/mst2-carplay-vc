@@ -62,10 +62,22 @@ Screenshots of every variant are in the [pics](pics/) folder.
 
 - Only place 1 jar file in folder
 - Every variant except lite also needs the native `cpvc-cover-bridge` helper
-- The jars for each variant are in `required-files/region-[eu|cn]/variant[x]/`.
+- The jars for each variant are in `required-files/region-[eu|cn|na]/variant[x]/`.
 - Region is auto-detected from the HU
 
 ### Region EU (4 variants)
+
+| Variant | Song info | Cover | Progress | Shuffle | Navi |
+|---|:-:|:-:|:-:|:-:|:-:|
+|**full**|✅|✅|✅|✅|✅|
+| **no-navi** | ✅ | ✅ | ✅ | ✅ |❌|
+|**no-navi-no-prog**| ✅ |✅|❌| ✅ |❌|
+| **lite** |✅|❌ |❌|❌| ❌ |
+
+### Region NA (4 variants)
+
+North American head units are detected from `STD2Nav_NAR` or `STD2Nav_US` and use the `na` package names.
+The initial NA target is `MST2_US_VW_PQ_P0478T` / STD2 TechniSat / `STD2 NAV PQ NAR` with 3D BAP.
 
 | Variant | Song info | Cover | Progress | Shuffle | Navi |
 |---|:-:|:-:|:-:|:-:|:-:|
@@ -113,7 +125,7 @@ CN has no navi variant (yet).
 1. **`method1-GEM/`** - custom menu entry in the MIB-STD2-Toolbox. Enable / disable / status / debug via Green Engineering Menu, no laptop required.
 2. **`method2-console/`** - run the scripts from terminal via telnet, laptop + ethernet adapter required.
 
-copy the files from your chosen `required-files/region-[eu|cn]/variant[x]/` folder into sd/custom/java
+copy the files from your chosen `required-files/region-[eu|cn|na]/variant[x]/` folder into sd/custom/java
 
 ### Method 1: via custom carplay-vc GEM menu entry in mib2std-toolbox
 
