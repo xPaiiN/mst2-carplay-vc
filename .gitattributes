@@ -1,0 +1,6 @@
+# the head unit needs exact line endings
+*.sh text eol=lf
+*.esd -text
+*.jar binary
+*.jpg binary
+custom/java/cpvc-cover-elf binary

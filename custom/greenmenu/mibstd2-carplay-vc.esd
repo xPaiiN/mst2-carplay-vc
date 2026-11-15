@@ -1,0 +1,47 @@
+# Made by xPaiiN <3
+# github.com/xPaiiN/mst2-carplay-vc
+# v2.0
+screen carplay-vc Customization
+
+keyValue
+    value   String sys 0x00000000 0
+    label   "MST2 CarPlay VC v2.0 - Made by xPaiiN <3"
+    poll    0
+keyValue
+    value   String sys 0x00000000 0
+    label   "FREE ON github.com/xPaiiN/mst2-carplay-vc"
+    poll    0
+keyValue
+    value   String sys 0x00000000 0
+    label   "Patch to bring CarPlay song info natively to Virtual Cockpit"
+    poll    0
+keyValue
+    value   String sys 0x00000000 0
+    label   "Enables 'Share to External Maps' for Navi variants"
+    poll    0
+keyValue
+    value   String sys 0x00000000 0
+    label   "-----------------------------------------"
+    poll    0
+
+script
+    value   sys 1 0x0100 "/tsd/etc/persistence/esd/scripts/cpvc_install.sh"
+    label   "Install"
+script
+    value   sys 1 0x0100 "/tsd/etc/persistence/esd/scripts/cpvc_state.sh"
+    label   "Status"
+script
+    value   sys 1 0x0100 "/tsd/etc/persistence/esd/scripts/cpvc_uninstall.sh"
+    label   "Uninstall"
+
+keyValue
+    value   String sys 0x00000000 0
+    label   "-----------------------------------------"
+    poll    0
+
+script
+    value   sys 1 0x0100 "/tsd/etc/persistence/esd/scripts/cpvc_install_debug.sh"
+    label   "Install (debug, only if asked)"
+script
+    value   sys 1 0x0100 "/tsd/etc/persistence/esd/scripts/cpvc_logs.sh"
+    label   "Collect Logs"
