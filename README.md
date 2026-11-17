@@ -10,6 +10,7 @@ Compatible with Virtual Cockpit and non-VC clusters (ZR + PQ).
 
 Works both on wired USB-cable and wireless connection via third-party dongles.
 
+
 |                           Stock HU                           |
 | :----------------------------------------------------------: |
 | <img src="https://github.com/xPaiiN/mst2-carplay-vc/blob/main/pics/1.jpg" width="1240"> |
@@ -413,9 +414,12 @@ MHI2.5:
 
 ---
 
+![](https://view-counter.tobyhagan.com/?user={xPaiiN})
+
 ## Development
 
 How the patch works and what it changes is in the [wiki](https://github.com/xPaiiN/mst2-carplay-vc/wiki).
+
 
 ### Stuff
 
